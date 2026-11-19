@@ -1,0 +1,4 @@
+Predicted Logger program output:
++A +B -B +Acopy use -Ac +P -P end -A
+
+Explanation: A and B are created; B is destroyed at the inner block end. Passing A by value creates a copy named Acopy; that copy is destroyed after use(). P is heap-created and destroyed by delete. `end` prints, then A is destroyed at main's end.

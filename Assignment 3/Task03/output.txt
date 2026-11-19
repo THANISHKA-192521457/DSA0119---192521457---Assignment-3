@@ -1,0 +1,8 @@
+Created 2x3
+Created 1x2
+Closed; booked seats=1
+Created 2x2
+Closed; booked seats=1
+Created 0x5
+Closed; booked seats=0
+Closed; booked seats=1

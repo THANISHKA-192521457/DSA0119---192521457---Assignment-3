@@ -1,0 +1,11 @@
+Shallow copy:
+ p.medicines ──┐
+               ├──> same heap array [Paracetamol, ORS]
+ q.medicines ──┘
+
+Deep copy:
+ p.medicines ──> heap array A [Paracetamol, ORS]
+ q.medicines ──> heap array B [Paracetamol, ORS]
+ (A and B are independent)
+
+Compile sanitizer locally with `g++ -std=c++17 -fsanitize=address -g main.cpp -o program` and run. This environment's ASan runtime reports that it is not first in the library list; run locally to capture the sanitizer report.

@@ -1,0 +1,4 @@
+Predicted output for the supplied Counter program:
+5 7 7
+
+Reason: postfix returns the old value (5) and increments c to 6. Prefix then increments c to 7 and returns the updated value (7). c remains 7.

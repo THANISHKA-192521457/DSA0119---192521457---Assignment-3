@@ -1,0 +1,4 @@
+Hello World
+true
+Empty=[]
+A longer message safely copied.

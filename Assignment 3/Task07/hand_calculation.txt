@@ -1,0 +1,4 @@
+Chosen example values: R=10 Ω, XL=+j5 Ω, XC=−j2 Ω.
+Series: Z = 10 + j(5−2) = 10+j3 Ω. |Z| = sqrt(10²+3²) = sqrt(109) ≈ 10.4403 Ω.
+Parallel R||L: (10×j5)/(10+j5). Numerator=j50; denominator magnitude-squared=125; result=(j50)(10−j5)/125 = 2+j4 Ω. |Z|=sqrt(20)≈4.47214 Ω.
+Division by zero impedance throws a domain_error.

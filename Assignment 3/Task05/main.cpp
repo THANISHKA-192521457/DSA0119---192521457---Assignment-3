@@ -1,0 +1,6 @@
+#include <iostream>
+#include <stdexcept>
+#include <vector>
+class Time {int h,m,s;public: Time(int H=0,int M=0,int S=0):h(H),m(M),s(S){normalize();} void normalize(){int total=h*3600+m*60+s; if(total<0)total=0;h=total/3600;m=(total/60)%60;s=total%60;} Time& operator++(){++s;normalize();return *this;} Time operator++(int){Time old=*this;++(*this);return old;} bool operator==(const Time& t)const{return h==t.h&&m==t.m&&s==t.s;}bool operator<(const Time&t)const{return h*3600+m*60+s<t.h*3600+t.m*60+t.s;}void print()const{std::cout<<h<<":"<<m<<":"<<s;}};
+class Playlist {std::vector<std::string> tracks;public:Playlist(std::initializer_list<std::string> x):tracks(x){}std::string& operator[](int i){if(i<0||i>=int(tracks.size()))throw std::out_of_range("track index");return tracks[i];}const std::string& operator[](int i)const{if(i<0||i>=int(tracks.size()))throw std::out_of_range("track index");return tracks[i];}};
+int main(){Time t(0,0,5);Time a=t++,b=++t;std::cout<<"a=";a.print();std::cout<<" b=";b.print();std::cout<<" t=";t.print();std::cout<<"\n";Time roll(0,59,59);++roll;roll.print();std::cout<<"\n";Playlist p{"Song A","Song B"};std::cout<<p[1]<<"\n";try{std::cout<<p[-1];}catch(const std::exception&e){std::cout<<"Checked: "<<e.what()<<"\n";}}

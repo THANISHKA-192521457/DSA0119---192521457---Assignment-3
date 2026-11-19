@@ -1,0 +1,4 @@
+Untitled | Unknown | copies=0
+Donated Book | Unknown | copies=0
+C++ Basics | Bjarne | copies=5
+Rejected: copies cannot be negative
